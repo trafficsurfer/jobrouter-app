@@ -7,6 +7,9 @@ services:
       - ./src/jobrouter_api:/app/app
       - ./front/dist:/app/front/dist
     command: uvicorn app.main:app --host 0.0.0.0 --port 80 --reload
+    environment:
+      - QDRANT_URL=${QDRANT_URL}
+      - QDRANT_KEY=${QDRANT_KEY}
     ports:
       - 8001:80
     restart: always

@@ -1,6 +1,6 @@
 # Jobrouter app
 
-Веб-приложение для подброа вакансий по резюме.
+Веб-приложение для подбора вакансий по резюме.
 
 ![](./screencast.gif)
 
@@ -19,6 +19,7 @@
 
 - Эмбеддинги: [sbert](https://www.sbert.net/) + [multilingual-e5-large](https://huggingface.co/intfloat/multilingual-e5-large)
 - Векторная база данных: [qdrant SaaS](https://qdrant.tech/)
+- Вспомогательное хранилище для текстов (обход ограничений qdrant free tier): SQLite
 - Бекенд: FastAPI
 - Фронтенд: astro + solidjs
 - Линтеры: black + ruff + pre-commit

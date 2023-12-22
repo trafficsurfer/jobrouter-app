@@ -8,6 +8,7 @@ RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
 
 COPY ./src/jobrouter_api /app/app
 COPY ./front/dist /app/front/dist
+COPY ./jobs.db /app
 
 EXPOSE 80
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]

@@ -8,6 +8,15 @@ class Job(BaseModel):
 
     text: str
 
+    class Config:
+        from_attributes = True
+
+class UploadJob(BaseModel):
+    """Job listing for publish"""
+    
+    id: int
+    text: str
+
 
 class Resume(BaseModel):
     """Resume text."""
